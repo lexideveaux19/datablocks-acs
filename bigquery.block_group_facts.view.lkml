@@ -30,11 +30,13 @@ view: bq_block_group_facts {
 
   # Income Measure
   measure: aggregate_income {
-    hidden: yes
+    hidden: no
     type: sum
     group_label: "Households"
     sql: ${TABLE}.aggregate_income ;;
+    value_format_name: usd_0
   }
+
 
   measure: avg_income_house {
     type: number

@@ -15,6 +15,10 @@ view: bq_tract_zcta_map {
     sql: LPAD(CAST(${TABLE}.ZCTA5 as STRING), 5, '0');;
     type: zipcode
     label: "ZIP (ZCTA)"
+    link: {
+      label: "Neighborhoods Overview"
+      url: "https://localhost:9999/dashboards/7?Day%20of%20Week={{ _filters['bars.day_of_week'] | url_encode }}"
+    }
   }
 }
 
